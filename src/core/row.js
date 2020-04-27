@@ -11,7 +11,6 @@ class Rows {
 
   getHeight(ri) {
     if (this.isHide(ri)) return 0;
-    console.log('ceshi');
     const row = this.get(ri);
     if (row && row.height) {
       return row.height;
