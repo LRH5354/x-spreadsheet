@@ -7,7 +7,6 @@ import { cssPrefix } from './config';
 import { locale } from './locale/locale';
 import './index.less';
 
-
 class Spreadsheet {
   constructor(selectors, options = {}) {
     let targetEl = selectors;
