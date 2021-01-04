@@ -79,6 +79,24 @@ class Spreadsheet {
     return this.datas.map(it => it.getData());
   }
 
+  cellText(ri, ci, text, sheetIndex = 0) {
+    this.datas[sheetIndex].setCellText(ri, ci, text, 'finished');
+    return this;
+  }
+
+  cell(ri, ci, sheetIndex = 0) {
+    return this.datas[sheetIndex].getCell(ri, ci);
+  }
+
+  cellStyle(ri, ci, sheetIndex = 0) {
+    return this.datas[sheetIndex].getCellStyle(ri, ci);
+  }
+
+  reRender() {
+    this.sheet.table.render();
+    return this;
+  }
+
   on(eventName, func) {
     this.sheet.on(eventName, func);
     return this;
